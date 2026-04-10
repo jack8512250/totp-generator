@@ -110,6 +110,33 @@ python totp.py JBSWY3DPEHPK3PXP
    python totp.py
    ```
 
+### 方式三：從 QR Code 圖片自動解碼（推薦首次設定）
+
+如果你有 Authenticator 的 QR Code 截圖：
+
+```bash
+python decode_qr.py qrcode.png
+```
+
+輸出：
+```
+==================================================
+  QR Code 解碼結果
+==================================================
+  Secret Key : JBSWY3DPEHPK3PXP
+  網站/服務  : MyWebsite
+  帳號       : user@example.com
+==================================================
+
+使用方式:
+  python totp.py JBSWY3DPEHPK3PXP
+
+或存入 .env:
+  TOTP_SECRET=JBSWY3DPEHPK3PXP
+```
+
+> **注意：** Windows 使用 decode_qr.py 需要額外安裝 [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 ---
 
 ## 常見問題
